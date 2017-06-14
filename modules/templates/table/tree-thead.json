@@ -1,0 +1,8 @@
+[
+    { "name": "name", "width": "30%" },
+    { "name": "gender", "width": "20%" },
+    { "name": "age", "width": "20%" },
+    { "name": "company", "width": "25%" },
+    { "name": "state", "width": "35%" },
+    { "name": "balance", "width": "25%", "cellFilter": "currency" }
+]

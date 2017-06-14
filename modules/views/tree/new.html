@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+	<link rel="stylesheet" href="/angularJsDemo/public/css/bootstrap.min.css">
+	<script src="/angularJsDemo/public/js/jquery-min.js"></script>
+	<script src="/angularJsDemo/public/js/bootstrap.min.js"></script>
+</head>
+<body  ng-controller="baseController">
+<div  ng-controller="demoController" class="container">
+	<nav id="myScrollspy"  ng-init="initProcess()" class="navbar navbar-default navbar-static"
+		role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button class="navbar-toggle" type="button" data-toggle="collapse"
+					data-target=".bs-js-navbar-scrollspy">
+					<span class="sr-only">切换导航</span> <span class="icon-bar">1</span> <span
+						class="icon-bar">2</span>
+				</button>
+				<a class="navbar-brand" href="#">教程名称</a>
+			</div>
+			<div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+				<ul id="nav-test" class="nav navbar-nav">
+					<li class="active"><a href="#ios">iOS</a></li>
+					<li><a href="#svn">SVN</a></li>
+				</ul>
+			</div>
+
+			<div class="progress">
+				<div class="progress-bar progress-bar-striped active" id="progress"
+					role="progressbar" aria-valuenow="45" aria-valuemin="0"
+					aria-valuemax="100" style="width: 50%">
+					<span class="sr-only">50% Complete</span>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+	<div data-spy="scroll" data-target="#myScrollspy" data-offset="0"
+		style="height: 100px; overflow: auto; position: relative;">
+		<div class="section">
+			<h4 id="ios">
+				iOS<small><a href="#" onclick="removeSection(this);">
+						&times; 删除该部分</a></small>
+			</h4>
+			<p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和
+				Apple TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和
+				Apple TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和
+				Apple TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和
+				Apple TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和
+				Apple TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和
+				Apple TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。</p>
+		</div>
+		<div class="section">
+			<h4 id="svn">
+				SVN<small></small>
+			</h4>
+			<p>Apache Subversion，通常缩写为 SVN，是一款开源的版本控制系统软件。Subversion 由
+				CollabNet 公司在 2000 年创建。但是现在它已经发展为 Apache Software Foundation
+				的一个项目，因此拥有丰富的开发人员和用户社区。Apache Subversion，通常缩写为 SVN，是一款开源的版本控制系统软件。Subversion 由
+				CollabNet 公司在 2000 年创建。但是现在它已经发展为 Apache Software Foundation
+				的一个项目，因此拥有丰富的开发人员和用户社区。Apache Subversion，通常缩写为 SVN，是一款开源的版本控制系统软件。Subversion 由
+				CollabNet 公司在 2000 年创建。但是现在它已经发展为 Apache Software Foundation
+				的一个项目，因此拥有丰富的开发人员和用户社区。Apache Subversion，通常缩写为 SVN，是一款开源的版本控制系统软件。Subversion 由
+				CollabNet 公司在 2000 年创建。但是现在它已经发展为 Apache Software Foundation
+				的一个项目，因此拥有丰富的开发人员和用户社区。</p>
+		</div>
+		
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			debugger;
+			$("#myScrollspy").scrollspy();
+
+			$('#myScrollspy').on('activate.bs.scrollspy', function(data) {
+				var total = $("#nav-test").children("li").size();
+				var current = data.target.childElementCount;
+				$("#nav-test").children("li").each(function(index, item) {
+					if ($(this).hasClass("active")) {
+						current = index + 1;
+						return;
+					}
+				});
+				$("#nav-test").children("li").each(function(index, item) {
+					$("#progress").css("width", current / total * 100 + "%");
+					$("#progress").html(current / total * 100 + "%");
+				});
+			})
+		});
+	</script>
+	</div>
+</body>
+</html>

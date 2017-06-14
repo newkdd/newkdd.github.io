@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+.mt15{
+	margin-top:15px;
+}
+.table.sgsTable{
+}
+.table.sgsTable td{
+	vertical-align:middle;
+	text-align:center;
+}
+.table.sgsTable th {
+  text-align:center;
+    white-space: nowrap;
+}
+.radio_Checked{
+	display:none;
+}
+.pr{
+	position:relative;
+}
+.cartTip {
+  position: absolute;
+  right: 10px;
+  top: -10px;
+}
+.cartColor{
+	color:#ed5565;
+}
+.cartBtnW{
+	width:45%;
+}
+.form-horizontal .control-label.cartTxt {
+  text-align: left;
+}
+.OtherExpense{
+	display:none;
+}
+.sgsTitle {
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.NoWrap{white-space: nowrap;}
+.cartBtnX{width: 30%;}
+.mr10{margin-right:10px;}
+.sgsTable th {
+    vertical-align: middle !important;}
+
+.NoWrap{white-space: nowrap;}
+.NoWrap{white-space: nowrap;}
+.sgsBorder{
+	border:1px solid #ccc;
+	padding:5px;}
+.form-horizontal .control-label {
+    margin-bottom: 0;
+    padding-top: 7px;
+    text-align: left;
+}
+
+.mb20{margin-bottom:20px;overflow:hidden;}
+.sgsBb{border-bottom: 1px solid #ccc;}
+.mb20{margin-bottom:20px;overflow:hidden;}
+.mb20{margin-bottom:20px;overflow:hidden;}
+.form-control.ml {
+  margin-left:36px;
+}
+.pt7{
+    padding-top: 7px;
+    display: inline-block;
+}
+@media (max-width: 767px) {
+    .form-control.ml {
+        margin-left: 0px;
+    }
+}

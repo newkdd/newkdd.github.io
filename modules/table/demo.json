@@ -1,0 +1,18 @@
+[
+	{
+        "name": "reportNo",
+        "displayName": "reportNo"
+    },
+    {
+        "name": "reportStatus",
+        "displayName": "reportStatus"
+    },
+    {
+        "name": "action",
+        "width": "5%",
+        "cellTemplate":"modules/templates/actionTemplate.html",
+        "headerCellTemplate": "<div align='center'><span class='glyphicon glyphicon-edit'></span> Action</div>",
+        "enableHiding": false,
+        "enableSorting": false
+    }
+ ]

@@ -1,0 +1,68 @@
+<div ng-controller="baseController" class="container">
+    <div class="container-fluid" ng-controller="demoController">
+        <div class="ibox-content m-b-sm border-bottom">
+            <div class="row"><!-- 
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label class="control-label" for="product_name">Date</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dat" is-open="popup1.opened" ng-required="true" close-text="关闭" clear-text="清空" current-text="今天" alt-input-formats="altInputFormats" />
+                            <span class="input-group-btn">
+                     <button type="button" class="btn btn-default" ng-click="open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                 </span>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label class="control-label" for="product_name">Product Name</label>
+                        <input type="text" id="product_name" name="product_name" value="" placeholder="Product Name" class="form-control">
+                    </div>
+                </div>
+                <!-- <div class="col-sm-4">
+                    <div class="form-group">
+                        <label class="control-label" for="product_name">Group Name</label>
+                        <ui-select multiple id="srch_status" name="srch_status" ng-model="searchData.status" theme="bootstrap" close-on-select="false" ng-disabled="disabled" class="ui-select" title="Select Status">
+                            <ui-select-match placeholder="Select Many">{{$item.statusName}}</ui-select-match>
+                            <ui-select-choices repeat="item in statuses | filter: $select.search">
+                                <span ng-bind-html="item.statusName | highlight: $select.search"></span>
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div> -->
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label class="control-label" for="status">Status</label>
+                        <select name="status" id="status" class="form-control">
+                            <option value="1" selected>Enabled</option>
+                            <option value="0">Disabled</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group" align="right">
+                    <button type="button" class="waves-effect waves-light btn-trims btn-green btn-radius" ng-click="demoNew()">
+                        <span class="glyphicon glyphicon-search"></span> new
+                    </button>
+                    <button type="button" class="waves-effect waves-light btn-trims btn-green btn-radius" ng-click="fnSearchMaster()">
+                        <span class="glyphicon glyphicon-search"></span> search
+                    </button>
+                    <div style="display: none;">
+                        <button id="linkedTest" data-toggle="modal" data-target="#linked-modal" data-ng-click="getLinkedMaster('linkedTest', 'Linked test');"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ibox-content m-b-sm border-bottom">
+            <div class="row">
+                <linked-modal />
+            </div>
+            <div data-ui-grid="gridOptions" style="width: 100%; height: 409px; text-align: center;"
+									ui-grid-edit ui-grid-pagination ui-grid-selection
+									ui-grid-exporter ui-grid-resize-columns ui-grid-auto-resize>
+								</div>
+        </div>
+    </div>
+</div>
+</div>
